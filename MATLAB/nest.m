@@ -4,7 +4,7 @@ function x = nest()
    nestedfun2()
 
    function nestedfun1()
-       %x=1;
+       x=1;
        x = x+1;
     end
 

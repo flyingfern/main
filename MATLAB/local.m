@@ -1,7 +1,7 @@
 function x = local()
 % Help line for main function
-   x=15; 
-   x= localfun1(x)+x;
+   x=2; 
+   %x= localfun1(x)+x;
    x = x^localfun2()
    %x = x+3;
 end
@@ -16,7 +16,7 @@ end
 
 function b = localfun2()
 % Help line for local fun 1
-    x = 20; %comment out this line to mess with program
+    %x = 20; %comment out this line to mess with program
     b=x.^2
 end
   
