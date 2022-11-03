@@ -5,7 +5,7 @@ function time = templaw(T0,Tenv,Ttarget)
 %should be given in Celsius
 
 if (Ttarget>T0 && Ttarget>Tenv) || (Ttarget<T0 && Ttarget<Tenv)
-    error('Room will never reach %f 1 degrees Celsius',Ttarget)
+    error('Room will never reach %f degrees Celsius',Ttarget)
 end
 % The heat transfer coefficient (this value reflects poor insulation)
 h = 1.5; 

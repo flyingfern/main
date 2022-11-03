@@ -1,0 +1,30 @@
+function [range,mh,time] = projectile1(v,angle,h)
+if h<0 
+    sprintf("Try again with a positive h")
+end
+g=9.81;
+opts = odeset('events',@events);    
+[t,y] = ode45(@bagel,[0 inf],[h v*sin(angle)],opts)
+
+    function [value,isterminal,direction] = events(t,w)
+    % EVENTS locates the time when the temp reaches the minimum temp specified.  
+        value = w(1);     % detect time when T=Tmin
+        isterminal =1 ;   % stop the integration
+    direction = -1;   % house could cool or warm
+end
+
+
+range=max(y)
+mh=max(y)
+time=t(end)
+
+
+
+end
+
+
+    
+function [wdot] = bagel(t,w)
+    wdot(1) = w(2)
+    wdot(2) = -g
+end
