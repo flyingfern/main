@@ -3,8 +3,8 @@ if h<0
     sprintf("Try again with a positive h");
 end
 g=9.81;
-opts = odeset('events',@events);    
-[t,y] = ode45(@bagel,[0 inf],[h v*sin(angle)],opts);
+opts = odeset('events',@events,'Refine',8);    
+[t,y] = ode45(@bagel,[0 inf],[h v*sind(angle)],opts);
 
     function [value,isterminal,direction] = events(t,w)
     % EVENTS locates when value is zero.  
