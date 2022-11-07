@@ -3,6 +3,10 @@ if h<0
     sprintf("Try again with a positive h");
 end
 g=9.81;
+<<<<<<< HEAD
+=======
+
+>>>>>>> b71f0601863f168bcc060dd7cbc94736c3886888
 opts = odeset('events',@events,'Refine',8);    
 [t,y] = ode45(@bagel,[0 inf],[h v*sind(angle)],opts);
 
@@ -17,11 +21,11 @@ opts = odeset('events',@events,'Refine',8);
         wdot(2) = -g;
         wdot = wdot';
     end
-
+y
 range=max(y);
 mh=max(y);
 time=t(end);
 
-plot(t,y(:,1),'r--')
+plot(t,y(:,2),'r--')
 
 end    
