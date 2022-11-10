@@ -16,7 +16,7 @@ function randgui(randfun)
 %   Copyright 2014 Cleve Moler
 %   Copyright 2014 The MathWorks, Inc.
 
-nmax = 10000;  % Number of samples
+nmax = 100000;  % Number of samples
 m = 25;        % Samples per plot
 
 if nargin < 1, randfun = 'rand'; end
